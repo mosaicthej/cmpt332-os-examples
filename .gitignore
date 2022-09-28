@@ -1,0 +1,11 @@
+*.o
+*.obj
+
+*.lib
+*.a
+
+*.exe
+
+*.vscode/
+
+
