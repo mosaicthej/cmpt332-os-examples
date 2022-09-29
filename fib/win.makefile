@@ -8,10 +8,10 @@ main.exe: $(objects)
 	$(CC) -o main $(objects)
 
 main.o: main.c fib.h
-	$(CC) -c $(CFLAGS) $(CPPFLAGS) main.c
+	$(CC) -c $(CFLAGS) main.c
 
 fib.o: fib.c fib.h
-	$(CC) -c $(CPPFLAGS) $(CFLAGS) fib.c
+	$(CC) -c $(CFLAGS) fib.c
 
 .PHONY: clean
 clean:

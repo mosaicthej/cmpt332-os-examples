@@ -3,6 +3,8 @@
 
 #include "fib.h"
 
+extern int counterInd;
+extern int* invokeCounterArr;
 
 int main(int argc, char *argv[]){
 	int i;
@@ -17,10 +19,14 @@ int main(int argc, char *argv[]){
 		printf("please have some integer input\n");
 		exit(1);
 	}
-
+	printf("line 22: invokeCounterArr is at %p\n", invokeCounterArr);
 	ctSize=1;
 	invokeCounterArr =(int *) malloc(sizeof(int)*ctSize);
+	printf("line 25: invokeCounterArr is at %p\n", invokeCounterArr);
 	counterInd = 0;
+
+	/* initialize the counter arr*/
+	invokeCounterArr[counterInd] = 0;
 		
 	result = (int *) malloc(m*sizeof(int));
 	
